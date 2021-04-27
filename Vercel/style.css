@@ -1,0 +1,478 @@
+/*css reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 58.5%;
+    font-family: arial,sans-serif;
+    font-weight: bold;
+    background-color:whitesmoke;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.body{
+    background-color: whitesmoke;
+}
+
+.nav {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+  }
+   
+  .nav > .nav-header {
+    display: inline;
+  }
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color:black;
+    padding: 20px 20px 20px 50px;
+  }
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-weight: 400;
+    padding: 20px 30px 0px 0px;
+    font-size: 14px;
+  }
+  .nav-menu1{
+    display: flex;
+    align-items: center;
+
+  }
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: black;
+  }
+   
+  .nav > .nav-links > a:hover {
+   text-decoration: none;
+   color: gray;
+  }
+.nav > .nav-btn,
+.nav > #nav-check {
+  display: none;
+}  
+.button {
+    background-color: black;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    border-radius: 4px;
+  }
+  .button a{
+      color: white;
+  }
+@media (max-width:1000px) {
+
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      text-decoration: none;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid black;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: white;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+      float: right;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+    .hide-small{
+        display: none;
+    }
+}
+.heading{
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-weight: 700;
+    font-size:70px;
+    
+    
+}
+h2{
+    color:gray;
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+}
+@media only screen and (max-width: 1000px) {
+    .heading{
+        padding-top: 40px;
+    }
+    h1{
+       font-size: 40px;
+    }
+
+    .content {
+        display: none;
+    }
+}
+.row2{
+    padding: 60px 50px 50px 100px;
+    }
+
+.column2 {
+    flex:1;
+    float: left;
+    width: 23%;
+    height: 370px;
+    background-color: white;
+    border-radius: 4px;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    
+}
+.column2 h2{
+    color: black;
+    font-weight: 750;
+    font-size: xx-large;
+    padding-top: 90px;
+}
+.column2 p{
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+    color:gray;
+ }
+
+ .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    color: white;
+    text-align: center;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+ 
+  }
+  
+
+.btn{
+    display: inline-flex;
+    width: 90%;
+    height: 10%;
+    justify-content: center; 
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+
+  }
+  .btn:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  }
+ .btn p{
+      color: white;
+  }
+
+  
+  /* Clear floats after the columns */
+  .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 1000px) {
+      .row2{
+        padding-left: 50px;
+        padding-right: 50px;
+
+      }
+    .column2 {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 15px;
+    }
+    .btn{
+        margin-top: 40px;
+    }
+    
+  }
+  
+
+/* Create three equal columns that floats next to each other */
+.row{
+    max-width: 1300%;
+    flex-flow: row wrap;
+    background-color: white;
+    line-height: 1.65;
+    margin: 40px auto 0 auto;
+    padding:20px 50px;
+    justify-content: center;
+    font-weight: 500;
+    padding-left: 90px;
+    padding-bottom: 30px;
+    box-shadow: 0px -0.1px 3px;
+
+
+   
+}
+.column {
+    flex: 1;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+   
+  }
+.column h2{
+    color: black;
+    font-weight: 700;
+    font-size: x-large;
+    padding-bottom: 0px;
+    
+    }
+.column p{
+      color:gray;
+      font-weight: 100;
+      font-size: 15px;
+
+    }
+
+/* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .highlighter{
+    color: blue;
+   
+  }
+  .highlighter:hover{
+    text-decoration: underline;
+  }
+  
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 1000px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+.row1{
+    background-color:#0070f3;
+    padding: 50px;
+    box-shadow: 0px -0.1px 3px;
+
+
+
+}
+.column1 {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+         /* Should be removed. Only for demonstration */
+  }
+
+.column1 h1 {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+ 
+ }
+.column1 h4{
+     color: white;
+     font-weight: lighter;
+     padding-top: 10px;
+     font-size: 20px;
+
+ }
+
+  
+  /* Clear floats after the columns */
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .btn1{
+    background-color:black; 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0px 20px 150px;
+    cursor: pointer;
+   font-family: arial,sans-serif;
+   border-radius: 12px;
+  }
+@media screen and (max-width: 1000px) {
+     
+    .column1 {
+      width: 100%;
+    }
+    .column1 .btn1 {
+        margin: 0px;
+    }
+  }
+.footer{
+    max-width: 1300%;
+    flex-flow: row wrap;
+    background-color: white;
+    line-height: 1.65;
+    margin: 0px auto 0 auto;
+    justify-content: center;
+    font-weight: 500;
+    height: 90%;
+    padding: 0px;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	font-weight: 400;
+	color: #1e3932;
+	box-shadow: 0px -0.1px 3px;
+	display: flex;
+}
+
+.container {
+    flex: 1;
+    float: left;
+    width: 25%;
+    padding: 50px 50px 50px 80px;
+
+       
+  }
+.container .collapsible{
+    color: black;
+    font-size: 18px;
+	text-transform: capitalize;
+	font-weight: 500;
+    display: block;
+}
+ .content {
+	font-size: 16px;
+	text-transform: capitalize;
+    text-decoration: none;
+	font-weight: 100;
+	color: gray;
+	display: block;
+	transition: all 0.3s ease;
+    display: block;
+}
+@media screen and (max-width: 1000px) {
+    .footer{
+        padding: 60px;
+
+    }
+     .container {
+        width: 100%;
+        padding-top: 0px;
+      }
+    .collapsible {
+        background-color:white;
+        color: white;
+        cursor: pointer;
+        width: 50%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        padding:0px;
+      }
+      .content {
+        overflow: hidden;
+        display: none;
+        background-color: white;
+      }
+      
+}
+.footer-links{
+
+    max-width: 1300%;
+    flex-flow: row wrap;
+    background-color: white;
+    line-height: 1.65;
+    margin: 0px auto 0 auto;
+    justify-content: left;
+    font-weight: 500;
+    height: 90%;
+    padding: 0px 50px 50px 50px;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	font-weight: 400;
+	color: #1e3932;
+	display: flex;
+}
+/* change the styling of second li element in footer-links class*/
+li:nth-child(2) {
+    color:gray;
+    font-size: 14px;
+  }
+  
+@media screen and (max-width: 1000px){
+    .footer-links{
+        justify-content: center;
+    }
+    
+
+}
+    
+
+
